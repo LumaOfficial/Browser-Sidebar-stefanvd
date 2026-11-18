@@ -40,7 +40,7 @@ const buildExtension = (browser) => {
 		"./src/**/*.html",
 		"./src/scripts/**/*.js",
 		"./src/styles/**/*.css"
-	]);
+	], {base: "./src"});
 
 	const processedFiles = sourceFiles.pipe(rename((file) => {
 		if(file.extname === ".html" || file.basename === "LICENSE"){
